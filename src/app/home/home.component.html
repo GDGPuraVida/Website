@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <mat-toolbar-row>
+    <div *ngIf="!(isHandset$ | async); then longTitle else shortTitle"></div>
+
+    <ng-template #longTitle>
+      <p>Grupo de Desarrollo de Google de Costa Rica</p>
+    </ng-template>
+    
+    <ng-template #shortTitle>
+      <p>Costa Rica</p>
+    </ng-template>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="meetup"></mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="facebook"></mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="linkedin"></mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<h2>En desarrollo...</h2>
