@@ -10,14 +10,14 @@
       <p>Costa Rica</p>
     </ng-template>
     <span class="toolbar-spacer"></span>
-    <button mat-icon-button>
+    <button mat-icon-button (click)="goToExternalUrl('https://www.meetup.com/gdg-costarica/')">
       <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="meetup"></mat-icon>
     </button>
-    <button mat-icon-button>
+    <button mat-icon-button (click)="goToExternalUrl('https://www.facebook.com/gdgpuravida/')">
       <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="facebook"></mat-icon>
     </button>
-    <button mat-icon-button>
-      <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="linkedin"></mat-icon>
+    <button mat-icon-button (click)="goToExternalUrl('https://developers.google.com/programs/community/gdg/')">
+      <mat-icon aria-label="Example icon-button with a heart icon" svgIcon="google-developers"></mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>

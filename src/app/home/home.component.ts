@@ -12,15 +12,18 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class HomeComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-    
-    constructor(private breakpointObserver: BreakpointObserver, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-      iconRegistry.addSvgIcon('meetup', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/meetup-logo.svg'));
-      iconRegistry.addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/facebook-logo.svg'));
-      iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/linkedin-logo.svg'));
-    }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+    map(result => result.matches)
+  );
   
+  constructor(private breakpointObserver: BreakpointObserver, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon('meetup', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/meetup-logo.svg'));
+    iconRegistry.addSvgIcon('facebook', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/facebook-logo.svg'));
+    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/linkedin-logo.svg'));
+    iconRegistry.addSvgIcon('google-developers', sanitizer.bypassSecurityTrustResourceUrl('../../assets/images/google-developers-logo.svg'));
+  }
+
+  goToExternalUrl(url: string): void {
+    window.open(url, '_blank');
+  }
 }
