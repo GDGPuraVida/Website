@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { MatDialog } from '@angular/material';
+import { MeetupComponent } from './meetup/meetup.component';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +11,17 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gdgPuraVida';
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+    map(result => result.matches)
+  );
     
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, public dialog: MatDialog) {
+  }
+
+  login(){
+    this.dialog.open(MeetupComponent, {
+      width: '300px',
+    });
   }
 }
