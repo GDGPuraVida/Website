@@ -1,31 +1,56 @@
-.sidenav {
-  width: 200px;
-}
-
 .sidenav-container {
   height: 100%;
-}
-
-.user {
-  width: 100%;
-  text-align: center;
-  button {
-    margin: 25px;
+  .sidenav {
+    width: 200px;
+    .user {
+      width: 100%;
+      text-align: center;
+      button {
+        margin: 25px;
+      }
+    }
+  }
+  #main-toolbar {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #bdbdbd;
+    z-index: 7;
+    .logo {
+      height: 32px;
+      margin: 2px, 0;
+    }
+  }
+  footer {
+    color: #fff;
+    .sponsors-and-links {
+      display: flex;
+      flex-wrap: wrap;
+      .sponsors {
+        flex: 2 1 auto;
+        background-color: #303C42;
+        padding: 20px;
+      }
+      .links {
+        flex: 1 1 auto;
+        background-color: #37424B;
+        padding: 20px;
+      }
+    }
+    .join {
+      background-color: #445A64;
+      .content {
+        padding: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+      }
+      span {
+        margin: 8px 20px;
+      }
+    }
   }
 }
 
-#main-toolbar {
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #bdbdbd;
-  z-index: 7;
-}
-
-.logo {
-  height: 32px;
-  margin: 2px, 0;
-}
-
-.toolbar-spacer {
+.spacer {
   flex: 1 1 auto;
 }

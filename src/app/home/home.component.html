@@ -1,11 +1,9 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
   <mat-toolbar-row>
     <div *ngIf="!(isHandset$ | async); then longTitle else shortTitle"></div>
-
     <ng-template #longTitle>
       <p>Grupo de Desarrollo de Google de Costa Rica</p>
     </ng-template>
-    
     <ng-template #shortTitle>
       <p>Costa Rica</p>
     </ng-template>
@@ -21,4 +19,47 @@
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
-<h2>En desarrollo...</h2>
+<div class="container white">
+  <div class="introduction">
+    <div class="column">
+      <h1>¿Qué es un GDG?</h1>
+      <p>La plataforma GDG es un nivel de membresía dentro del programa de grupos comunitarios de Google Developers y ofrece apoyo personalizado a los organizadores de los capítulos locales de GDG.</p>
+      <p>Los Google Developer Groups (GDGs) son entidades sin ánimo de lucro creadas con el objetivo de mejorar la comunidad de entusiastas tecnológicos y aumentar el conocimiento y las relaciones entre las personas que se dedican a esta área.</p>
+      <img class="gdgLogo" src="../../assets/images/gdg.png" alt="GDG">
+    </div>
+    <div class="column">
+      <h1>¿Qué hacemos?</h1>
+      <p>Creamos eventos, charlas y talleres para compartir el conocimiento sobre tecnología y mejorar el panorama desarrollador del país. Además, la gran mayoría de estos eventos son libres y gratuitos, pues creemos que el conocimiento no debe enfrentarse a mayor barrera que el interés del que quiere aprenderlo.</p>
+      <p>Los GDGs también tienen como objetivo la promoción de las relaciones entre expertos tecnológicos, por lo que colaboramos en la difusión de otras comunidades tecnológicas (GDE, Women Techmakers,etc).</p>
+    </div>
+  </div>
+</div>
+<div class="container grey">
+  <div class="events">
+    <h2>Evento destacado</h2>
+    <mat-card class="featured-event">
+      <img src=".././../assets/images/DevFest2018.png" alt="Add for DevFest2018">
+    </mat-card>
+  </div>
+</div>
+<div class="container white">
+  <div class="data">
+    <div class="column">
+      <p><b>30</b> eventos desde mayo del 2016</p>
+    </div>
+    <div class="column">
+      <p><b>614</b> miembros</p>
+    </div>
+    <div class="column">
+      <p>Parte de GDG: <b>746 grupos</b></p>
+    </div>
+  </div>
+</div>
+<div class="container grey">
+  <div class="events">
+    <h2>Próximo evento</h2>
+    <mat-card class="featured-event">
+      <img src=".././../assets/images/DevFest2018.png" alt="Add for DevFest2018">
+    </mat-card>
+  </div>
+</div>

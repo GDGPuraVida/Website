@@ -11,7 +11,11 @@ import { MeetupComponent } from './meetup/meetup.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+
+  sponsors = [
+    { name: 'Instituto Nacional de Seguros', image: '../assets/images/ins.png' }
+  ];
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(result => result.matches)
   );

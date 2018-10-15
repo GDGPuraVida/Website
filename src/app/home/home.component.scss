@@ -1,3 +1,45 @@
+mat-toolbar {
+  position: sticky;
+  top: 0;
+}
+.container {
+  &.white {
+    background-color: white;
+  }
+  &.grey {
+    background-color: #f7f7f7;
+  }
+}
+
 .toolbar-spacer {
   flex: 1 1 auto;
+}
+
+.introduction, .data {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  .column {
+    padding: 20px;
+    flex: 1; 
+  }
+}
+
+.events {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 20px;
+  .featured-event {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.gdgLogo {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
 }

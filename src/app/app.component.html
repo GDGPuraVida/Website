@@ -9,7 +9,7 @@
       <a mat-list-item routerLink="/sponsors">Patrocinadores</a>
     </mat-nav-list>
     <div class="user">
-      <button mat-raised-button (click)="login()">Login</button>
+      <button mat-raised-button color="accent" (click)="login()">Login</button>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -18,15 +18,45 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <img class="logo" src="../../assets/images/GDG Pura Vida.png" alt="">
-      <span class="toolbar-spacer"></span>
+      <span class="spacer"></span>
       <nav *ngIf="!(isHandset$ | async)">
         <button mat-button routerLink="/">Inicio</button>
         <button mat-button routerLink="/events">Eventos</button>
         <button mat-button routerLink="/team">Equipo</button>
         <button mat-button routerLink="/sponsors">Patrocinadores</button>
-        <button mat-raised-button (click)="login()">Login</button>
+        <button mat-raised-button color="accent" (click)="login()">Login</button>
       </nav>
     </mat-toolbar>
     <router-outlet></router-outlet>
+    <footer>
+      <div class="sponsors-and-links">
+        <div class="sponsors">
+          <h3>Patrocinadores del GDG</h3>
+          <mat-grid-list cols="3" rowHeight="100px">
+            <mat-grid-tile *ngFor="let sponsor of sponsors">
+              <mat-card>
+                <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
+              </mat-card>
+            </mat-grid-tile>
+          </mat-grid-list>
+          <p>¿Desea ser patrocinador del GDG Pura Vida? <a mat-button href="mailto:eduardo@gdgpuravida.xyz">Contáctenos</a></p>
+        </div>
+        <div class="links">
+          <h3>Links</h3>
+          <ul>
+            <li><a mat-button href="https://www.meetup.com/gdg-costarica/">Nuestro Meetup</a></li>
+            <li><a mat-button href="https://www.facebook.com/gdgpuravida">Página de Facebook</a></li>
+          </ul>
+          <img src="../assets/images/gdg-white.png" alt="GDG Costa Rica">
+        </div>
+      </div>
+      <div class="join">
+        <div class="content">
+          <span class="spacer"></span>
+          <span>Únase a nuestra comunidad</span>
+          <button mat-raised-button color="accent" (click)="login()">Suscríbase</button>
+        </div>
+      </div>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
