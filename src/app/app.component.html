@@ -32,13 +32,11 @@
       <div class="sponsors-and-links">
         <div class="sponsors">
           <h3>Patrocinadores del GDG</h3>
-          <mat-grid-list cols="3" rowHeight="100px">
-            <mat-grid-tile *ngFor="let sponsor of sponsors">
-              <mat-card>
-                <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
-              </mat-card>
-            </mat-grid-tile>
-          </mat-grid-list>
+          <div class="sponsor-cards">
+            <mat-card *ngFor="let sponsor of sponsors">
+              <img src="{{sponsor.image}}" alt="{{sponsor.name}}">
+            </mat-card>
+          </div>
           <p>¿Desea ser patrocinador del GDG Pura Vida? <a mat-button href="mailto:eduardo@gdgpuravida.xyz">Contáctenos</a></p>
         </div>
         <div class="links">

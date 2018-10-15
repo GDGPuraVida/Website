@@ -29,6 +29,17 @@
         flex: 2 1 auto;
         background-color: #303C42;
         padding: 20px;
+        .sponsor-cards {
+          display: flex;
+          flex-wrap: wrap;
+          // justify-content: space-evenly;
+          mat-card{
+            padding: 5px;
+            img {
+              max-height: 100px;
+            }
+          }
+        }
       }
       .links {
         flex: 1 1 auto;
@@ -43,9 +54,17 @@
         max-width: 1400px;
         margin: 0 auto;
         display: flex;
-      }
-      span {
-        margin: 8px 20px;
+        span {
+          margin: 8px 20px;
+        }
+        @media screen and (max-width: 420px) {
+          .spacer {
+            display: none;
+          }
+          span {
+            margin: 4px 10px 4px 0;
+          }
+        }
       }
     }
   }
